@@ -1,12 +1,13 @@
 <?php
 //% String
-/* $str1 = 'Ciao, sono una stringa!';
+/* $str1 = 'Ciao, sono una stringa! ';
 $str2 = "Anche io sono una stringa!";
 echo $str1, $str2; */
 
+
 //$ Indicizzazione delle stringhe
 //$str = "Ciao, mondo!";
-//echo $str[3]; // o
+//echo $str[11]; // o
 //echo $str{3}; // Deprecato
 
 /* $str = "Ciao, mondo!";
@@ -15,8 +16,9 @@ echo $str; // CiaS, mondo! */
 
 
 //$ Concatenazione delle stringhe
-//echo 'Stringa 1' . ' + ' . 'Stringa 2.'; // Stringa 1 + Stringa 2.
+//echo 'Stringa 1' . ' ' . 'Stringa 2.'; // Stringa 1 + Stringa 2.
 /* $str1 = 'Str';
+echo $str1;
 $str1 .= 'inga';
 echo $str1; // Stringa */
 
@@ -40,10 +42,9 @@ echo $saluto; // Ciao, $nome! */
 $saluto = 'Ciao, ' . $nome . '!';
 echo $saluto; // Ciao, Mario! */
 
-
 //* Interpolazione tramite le graffe ${}
 /* $var = 'pizza';
-echo "Il mio cibo preferito è: ${pizza}"; */
+echo "Il mio cibo preferito è: $var."; */
 
 
 //% Caratteri di escape
