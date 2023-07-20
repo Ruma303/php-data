@@ -42,10 +42,14 @@ echo $saluto; // Ciao, $nome! */
 $saluto = 'Ciao, ' . $nome . '!';
 echo $saluto; // Ciao, Mario! */
 
-//* Interpolazione tramite le graffe ${}
+//* Interpolazione tramite il dollaro e le graffe ${}
 /* $var = 'pizza';
 echo "Il mio cibo preferito è: $var."; */
 
+//* Interpolazione tramite le graffe {}
+/* $course = 'PHP';
+echo "Corso = $course"; */
+// Corso = PHP
 
 //% Caratteri di escape
 //echo 'Un\'ora';
