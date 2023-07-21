@@ -111,6 +111,32 @@ print_r($array); */
 // Array([0] => zero [1] => due [2] => tre)
 
 
+//% Operatori degli array
+
+//$ Operatore di unione +
+/* $array1 = array("a" => "apple", "b" => "banana");
+$array2 = array("a" => "pear", "c" => "cherry");
+$result = $array1 + $array2;
+print_r($result);
+// Array ( [a] => apple [b] => banana [c] => cherry ) */
+
+
+//$ Operatori di confronto
+$array1 = array("a" => "apple", "b" => "5");
+$array2 = array("a" => "apple", "b" => 5, "c" => "cherry");
+$array3 = array("b" => "5", "a" => "apple");
+
+var_dump($array1 == $array3);  // bool(true)
+var_dump($array1 === $array3); // bool(false)
+var_dump($array1 <> $array2);  // bool(true)
+var_dump($array1 !== $array2); // bool(true)
+
+
+
+
+
+
+
 //% Metodi degli array
 /* $array = [1, 2, 3, 4, 5];
 echo in_array("5", $array, true); // false */
