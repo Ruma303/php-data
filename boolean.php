@@ -3,12 +3,12 @@
 /* $isBoolean = true;
 $isBoolean = True;
 $isBoolean = TRUE;
-echo $isBoolean;
-$isBoolean = null;
+echo $isBoolean; */
+/* $isBoolean = 0;
 echo $isBoolean;
 $isBoolean = "";
-echo $isBoolean;
-$isBoolean = "0.0";
+echo $isBoolean; */
+/* $isBoolean = "0.0";
 echo $isBoolean; */
 
 /* echo is_string('hello'); // 1
@@ -21,6 +21,6 @@ if ($isReady) {
     echo "Siamo pronti!";
 } else {
     echo "Non siamo pronti!";
-}
- */
+} */
+
 

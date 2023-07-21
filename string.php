@@ -44,29 +44,33 @@ echo $saluto; // Ciao, Mario! */
 
 //* Interpolazione tramite il dollaro e le graffe ${}
 /* $var = 'pizza';
-echo "Il mio cibo preferito è: $var."; */
+echo "Il mio cibo preferito è: ${var}."; */
+
 
 //* Interpolazione tramite le graffe {}
 /* $course = 'PHP';
-echo "Corso = $course"; */
+echo "Corso = {$course}"; */
 // Corso = PHP
 
+
 //% Caratteri di escape
-//echo 'Un\'ora';
 //echo "Un'ora";
+//echo 'Lui ha detto "Ciao a tutti"';
+//echo 'Un\'ora';
 //echo "\"Lui ha detto:...\"";//"Lui ha detto:..."
 //echo 'C:\\User\\Altre cartelle';
-//echo "Prima riga\nSeconda riga\rTerza riga"; // Solo terminale
+//echo "Prima riga\nSeconda riga\n\tTerza riga"; // Solo terminale
+//echo "\&#34;";
 
 
 //% Heredoc e Nowdoc
 //$ Heredoc
 /* $nome = "Matteo";
-$nowdoc = <<<Text
+$heredoc = <<<Text
 Ciao, il mio nome è $nome " \n
 Piacere di conoscerti! ' \t
 Text;
-echo $nowdoc; */
+echo $heredoc; */
 // Ciao, il mio nome è Matteo " Piacere di conoscerti! '
 
 
@@ -83,13 +87,15 @@ echo $nowdoc; */
 //% Costrutti delle stringhe
 ?> <!-- Occorre uscire da PHP -->
 <html>
-
     <!-- echo -->
-  <!--   <?php
+    <?php /*
         $name = "Matteo";
         $age = 28;
-        echo $name, $age;
+        $city = "Roma";
+        echo $name, $age, $city;
+        */
     ?>
+<!--
     <h2><?= 'Hello World'; ?><h2>
     <?= '<h2>Hello World</h2>'; ?>
  -->
@@ -103,7 +109,6 @@ echo $nowdoc; */
 
 
 //% Metodi delle stringhe
-
 /* $originale = "Ciao, mondo!";
 $sostituita = str_replace("mondo", "PHP", $originale);
 echo $originale; // "Ciao, mondo!"
@@ -114,10 +119,8 @@ $str = "Stringa di prova";
 //echo strlen($str); // 16
 
 //echo substr($str, 5); // ga di prova
-//echo substr($str, 5, 4); // ga ds
+//echo substr($str, 5, 4); // ga d
 
-//echo str_replace("Stringa", "Testo", $str);
-// Testo di prova
 
 //echo strpos($str, "di"); // 8
 
@@ -128,26 +131,26 @@ echo strcmp($str, $str2); // 1 */
 var_dump($array); */
 
 /* $text = "L'apprendimento di 'PHP' è divertente!";
-echo addslashes($text);
-// L\'apprendimento di \'PHP\' è divertente! */
+echo addslashes($text); */
+// L\'apprendimento di \'PHP\' è divertente!
 
-/* echo trim("  Ciao, mondo!  ");   // "Ciao, mondo!"
-echo ltrim("  Ciao, mondo!  ");  // "Ciao, mondo!  "
-echo rtrim("  Ciao, mondo!  ");  // "  Ciao, mondo!" */
+/* echo trim("  Ciao, mondo!  ") . '<br>';   // "Ciao, mondo!"
+echo ltrim("  Ciao, mondo!  ") . '<br>';  // "Ciao, mondo!  "
+echo rtrim("  Ciao, mondo!  ") . '<br>';  // "  Ciao, mondo!" */
 
-/* echo lcfirst("Ciao, mondo!"); // "ciao, mondo!"
-echo ucfirst("ciao, mondo!"); // "Ciao, mondo!"
-echo ucwords("ciao, mondo!"); // "Ciao, Mondo!"
-echo ucwords("ciao-mondo!", "-"); // "Ciao-Mondo!" */
+/* echo lcfirst("Ciao, mondo!") . '<br>'; // "ciao, mondo!"
+echo ucfirst("ciao, mondo!") . '<br>'; // "Ciao, mondo!"
+echo ucwords("ciao, mondo!") . '<br>'; // "Ciao, Mondo!"
+echo ucwords("ciao mondo!", " ") . '<br>'; // "Ciao-Mondo!" */
 
-/* echo strtolower("Città");   // "città"
-echo strtoupper("città");   // "CITTà"
-echo mb_strtolower("CITTÀ"); // "città"
-echo mb_strtoupper("città"); // "CITTÀ" */
+/* echo strtolower("Città") . '<br>';   // "città"
+echo strtoupper("città") . '<br>';   // "CITTà"
+echo mb_strtolower("CITTÀ") . '<br>'; // "città"
+echo mb_strtoupper("città") . '<br>'; // "CITTÀ" */
 
 
 //$ Metodi disponibili dopo PHP 8
-//echo str_contains("Ciao, mondo!", "mondo"); // true
-//echo str_starts_with("Ciao, mondo!", "Ciao"); // true
-//echo str_ends_with("Ciao, mondo!", "mondo!"); // true
-//echo get_debug_type("Ciao, mondo!"); // "string"
+//echo str_contains("Ciao, mondo!", "mondo") . '<br>'; // true
+//echo str_starts_with("Ciao, mondo!", "Ciao") . '<br>'; // true
+//echo str_ends_with("Ciao, mondo!", "mondo!") . '<br>'; // true
+//echo get_debug_type("Ciao, mondo!") . '<br>'; // "string"

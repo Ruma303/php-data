@@ -3,7 +3,6 @@
 //$array = [2, "Ciao", null, true];
 
 //% echo vs var_dump()
-
 //$array = ['a', 'b', 'c'];
 //echo $array; // Array
 //var_dump($array); // Array
@@ -18,21 +17,21 @@
 var_dump($array1); */
 
 /* $array2 = array(1,2,3,4); // array()
-var_dump($array1); */
+var_dump($array2); */
 
 //* Accedere agli elementi degli array
-/* $cities = ["Roma", "Milano", "Genova"];
-echo $cities[2]; // Genova */
+//$cities = ["Roma", "Milano", "Genova", "Napoli"];
+//echo $cities[2]; // Genova
 
+//* count()
 /* $elements = count($cities);
 echo $elements; // 3 */
 
+//* Aggiungere elementi agli array indicizzati
 /* $cities[] = "Napoli";
 var_dump($cities); */
 // ["Roma", "Milano", "Genova", "Napoli"]
-
-
-
+//echo $cities[4];
 
 
 
@@ -46,13 +45,14 @@ var_dump($cities); */
     "job",
 ]; */
 //var_dump($array);
-/* array(3) {
-    ["firstName"]=> string(5) "Mario"
-    ["lastName"]=> string(5) "Rossi"
-    ["age"]=> int(54)
-    [0]=> string(7) "address"
-    [10]=> int(20)
-    [11]=> string(3) "job" } */
+/* $array = array(
+    "firstName" => "Mario",
+    "lastName" => "Rossi",
+    "age" => 54,
+    0 => "address",
+    10 => 20,
+    11 => "job"
+); */
 
 //* Accedere agli array associativi
 //echo $array["age"].' '.$array[10]; // 54 10
@@ -63,6 +63,7 @@ var_dump($cities); */
 
 //* extract()
 /* $firstName = "Giovanni";
+echo $firstName;
 extract($array);
 echo $firstName, $lastName, $age, 0, 10, 11; */
 
@@ -73,7 +74,7 @@ echo $firstName, $lastName, $age, 0, 10, 11; */
     true,
     ['name' => "Paolo", 2, "interests" => ["Calcio", "Economia"]],
     "Utente 1" => ['name' => "Giovanna", 5, "interests" => ["Aerei", "Viaggi"]],
-    "Utente 2" =>['name' => "Michele", 8, "interests" => ["Cavalli", "Ping Pong"]],
+    "Utente 2" =>['name' => "Michele", 8, "interests" => ["Cavalli", "sport" => "Ping Pong"]],
 ]; */
 //print_r($people);
 
@@ -83,7 +84,7 @@ echo $firstName, $lastName, $age, 0, 10, 11; */
 //var_dump($people[1]); // Primo array
 //var_dump($people["Utente 1"]); // Secondo array
 //var_dump($people["Utente 1"]["name"]); // "Giovanna"
-//var_dump($people["Utente 2"]["interests"][0]); // "Cavalli"
+//var_dump($people["Utente 2"]["interests"]["sport"]); // "Cavalli"
 
 
 
@@ -91,7 +92,7 @@ echo $firstName, $lastName, $age, 0, 10, 11; */
 //% Array unpacking
 //$array1 = [1, 2, 3];
 //$array2 = [$array1, 4, 5, 6];
-//echo $array2;
+//print_r($array2);
 
 /* $array2 = [...$array1, 4, 5, 6];
 var_dump($array2); */
@@ -100,13 +101,14 @@ var_dump($array2); */
 
 
 //% Rimappare l'array
-/* $array = array('zero', 'uno', 'due', 'tre');
-unset($array[1]);
-print_r($array);
+//$array = array('zero', 'uno', 'due', 'tre');
+//unset($array[1]);
+//print_r($array);
 // Array([0] => zero [2] => due [3] => tre)
-$array = array_values($array); // ri-indicizza l'array
-print_r($array);
-// Array([0] => zero [1] => due [2] => tre) */
+
+/* $array = array_values($array); // ri-indicizza l'array
+print_r($array); */
+// Array([0] => zero [1] => due [2] => tre)
 
 
 //% Metodi degli array
@@ -114,26 +116,26 @@ print_r($array);
 echo in_array("5", $array, true); // false */
 
 /* $array = array('Have', 'a', 'nice', 'day!');
-echo implode(" ", $array);
-// Have a nice day! */
+echo implode(" ", $array); */
+// Have a nice day!
 
 /* $array = [1, 2];
 array_push($array, 3, 4, 5);
 print_r($array); // [1,2,3,4,5] */
 
-/* $array = [1, 2, 3, 4, 5];
-array_pop($array);
+//$array = [1, 2, 3, 4, 5];
+/*array_pop($array);
 print_r($array);
-// [1, 2, 3, 4];
+// [1, 2, 3, 4]; */
 
-array_unshift($array, -1, 0);
-print_r($array);
+/* array_unshift($array, -1, 0);
+print_r($array); */
 // [-1, 0, 1, 2, 3, 4];
 
-array_shift($array);
+/* array_shift($array);
 print_r($array);
-// [0, 1, 2, 3, 4];
+// [0, 1, 2, 3, 4]; */
 
-array_splice($array, 3, 2);
-print_r($array);
-// [0, 1, 2,]; */
+/* array_splice($array, 3, 2);
+print_r($array); */
+// [0, 1, 2,];
