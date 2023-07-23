@@ -101,11 +101,32 @@ echo '</pre>'; */
 print_r($_FILES);
 echo '</pre>'; */
 
+//* Info sul file caricato
+echo '<pre>';
+print_r($_FILES);
+echo '</pre>';
+echo "<h2>{$_POST['file-caricato']}</h2>";
+
 if(isset($_POST['file-caricato'])) {
-    echo '<pre>';
-    print_r($_FILES);
-    echo '</pre>';
-    echo "<h2>{$_POST['file-caricato']}</h2>";
+    //* Spostamento del file
+    $uploadedPath = $_SERVER['DOCUMENT_ROOT'] . '/uploads';
+
+    //* Controlla se la cartella 'uploads' esiste. Se non esiste, creala.
+    if (!is_dir($uploadedPath)) {
+        mkdir($uploadedPath, 0755);
+    }
+
+    $uploadedImage = $uploadedPath.'/'.$_FILES['file1']['name'];
+    $tmpFile = $_FILES['file1']['tmp_name'];
+    move_uploaded_file($tmpFile, $uploadedImage);
+
+    //* Debugging
+    $result = <<<RESULT
+    Percorso del file dov'è stato spostato: <br> $uploadedImage <br>
+    Il file: <strong> {$_FILES['file1']['name']} </strong>
+    è stato caricato correttamente! <br>
+    RESULT;
+    echo $result;
 }
 ?>
 <!DOCTYPE html>
@@ -122,10 +143,6 @@ if(isset($_POST['file-caricato'])) {
     </form>
 </body>
 </html>
-
-
-
-
 
 
 
