@@ -122,17 +122,14 @@ print_r($result);
 
 
 //$ Operatori di confronto
-$array1 = array("a" => "apple", "b" => "5");
+/* $array1 = array("a" => "apple", "b" => "5");
 $array2 = array("a" => "apple", "b" => 5, "c" => "cherry");
 $array3 = array("b" => "5", "a" => "apple");
 
 var_dump($array1 == $array3);  // bool(true)
 var_dump($array1 === $array3); // bool(false)
 var_dump($array1 <> $array2);  // bool(true)
-var_dump($array1 !== $array2); // bool(true)
-
-
-
+var_dump($array1 !== $array2); // bool(true) */
 
 
 

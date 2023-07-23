@@ -90,7 +90,42 @@ function test() {
 
 <?php
 //$ $_SERVER
-var_dump($_SERVER);
+/* echo '<pre>';
+print_r($_SERVER);
+echo '</pre>'; */
 
+
+
+//$ $_FILES
+/* echo '<pre>';
+print_r($_FILES);
+echo '</pre>'; */
+
+if(isset($_POST['file-caricato'])) {
+    echo '<pre>';
+    print_r($_FILES);
+    echo '</pre>';
+    echo "<h2>{$_POST['file-caricato']}</h2>";
+}
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post" action="superglobals-array.php" enctype="multipart/form-data">
+        <input type="file" name="file1">
+        <button type="submit" name="file-caricato" value="File caricato">Carica</button>
+    </form>
+</body>
+</html>
+
+
+
+
+
+
 
