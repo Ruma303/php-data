@@ -10,21 +10,21 @@ var_dump($str); // String */
 
 //$ Da stringhe a numeri
 /* $str1 = "10";
-echo $str1 + 20; // Stampa "30"
+echo $str1 + 20 . '<br>'; // Stampa "30"
 
 $str2 = "10.5";
-echo $str2 + 0.5; // Stampa "11"
+echo $str2 + 0.5 . '<br>'; // Stampa "11"
 
 $str3 = "10abc";
-echo $str3 + 1; // Stampa "11"
+echo $str3 + 1 . '<br>'; // Stampa "11"
 
 $str4 = "abc10";
 try {
-    echo $str4 + 1; // Questo causerà un TypeError in PHP 8.0+
+    echo $str4 + 1 . '<br>'; // Questo causerà un TypeError in PHP 8.0+
 } catch (TypeError $e) {
-    echo "Errore: " . $e->getMessage();
-}
- */
+    echo "Errore: " . $e->getMessage() . '<br>';
+} */
+
 
 //$ Da numeri a booleani
 /* $numero1 = 0;
@@ -60,8 +60,9 @@ if ($array_vuoto) { // false
 }
 if ($array) { // true
     echo "Questo verrà stampato";
-}
- */
+} */
+
+
 //$ Da null a booleani
 /* $valore = null;
 if ($valore) { // false
@@ -71,18 +72,17 @@ if ($valore) { // false
 
 //% Conversioni esplicite
 
-
 //$ Sintassi
 /* $var = 42; // integer
 echo gettype($var) . '<br>';
-$var = (string)$var; // string
+$var = (string) $var; // string
 echo gettype($var); */
 
 //* (int) e (integer)
 /* $float = 3.14; // float
 $int = (int) $float; // integer
-echo $int; // 3
- */
+echo $int; // 3 */
+
 
 //* (float) o (double)
 /* $stringa = "3.14"; // string
@@ -90,7 +90,7 @@ $float = (float) $stringa; // float
 echo $float; // 3.14 */
 
 //* (string)
-/* $numero = 42; // integer
+/* $numero = "42"; // integer
 $stringa = (string) $numero; // string
 echo $stringa; // 42 */
 
@@ -107,5 +107,5 @@ var_dump($array); // [0] => string "Hello, world!" */
 //* (object)
 /* $numero = 42; // integer
 $oggetto = (object) $numero; // object
-var_dump($oggetto);
-// object(stdClass)#1 (1) { ["scalar"]=> int(42) } */
+var_dump($oggetto); */
+// object(stdClass)#1 (1) { ["scalar"]=> int(42) }

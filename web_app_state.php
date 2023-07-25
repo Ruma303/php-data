@@ -92,11 +92,31 @@ if ($sessionStatus == PHP_SESSION_DISABLED) {
 
 //$ Salvare le sessioni altrove
 
-    $sessionPath = $_SERVER['DOCUMENT_ROOT'] . '/Sessions';
+    /* $sessionPath = $_SERVER['DOCUMENT_ROOT'] . '/Sessions';
     session_save_path($sessionPath);
     echo '<b>Nuovo percorso sessione: </b> ' . session_save_path() . '<br>';
     session_start();
-    echo '<b>ID sessione: </b>' . session_id() . '<br>';
+    echo '<b>ID sessione: </b>' . session_id() . '<br>'; */
 
 
+
+//$ Terminare le sessioni
+
+    /* session_start(); // Avvia una sessione
+    $_SESSION['username'] = 'Ruma'; // Imposta una variabile di sessione */
+
+    //* session_unset()
+    /* session_unset(); // Libera tutte le variabili di sessione
+    // A questo punto, $_SESSION['username'] non esiste più
+    if (!isset($_SESSION['username'])) {
+        echo 'La variabile di sessione è stata rimossa.';
+    } */
+
+    //* session_destroy()
+    /* session_destroy(); // Distrugge la sessione
+    // Anche se la sessione è stata distrutta, $_SESSION['username'] potrebbe esistere ancora
+    if (isset($_SESSION['username'])) {
+    echo 'La sessione è stata distrutta, ma $_SESSION[\'username\'] esiste ancora fino a quando il browser non viene chiuso o il cookie di sessione non viene impostato a un valore vuoto.';
+    } */
 ?>
+
