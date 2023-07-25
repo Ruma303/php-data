@@ -101,7 +101,7 @@ echo '</pre>'; */
 print_r($_FILES);
 echo '</pre>'; */
 
-//* Info sul file caricato
+/* //* Info sul file caricato
 echo '<pre>';
 print_r($_FILES);
 echo '</pre>';
@@ -143,6 +143,6 @@ if(isset($_POST['file-caricato'])) {
     </form>
 </body>
 </html>
-
+ */
 
 
