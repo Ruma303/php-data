@@ -6,16 +6,19 @@
 //$ $GLOBALS
 /* $course = 'PHP';
 $name = 'Eleonora';
-echo $GLOBALS['course']; // PHP
-function test() {
-    echo $GLOBALS['name']; // Eleonora
-    global $course;
-    echo $course; // PHP
-} test(); */
 
+function test() {
+    echo $GLOBALS['course'] . '<br>'; // PHP
+    echo $GLOBALS['name'] . '<br>'; // Eleonora
+    //global $course;
+    //echo $course . '<br>'; // PHP
+} test();
+ */
 
 //$ $_GET
-//echo "Nome: {$_GET['name']}, Cognome {$_GET['last-name']}.";
+//var_dump($_GET);
+//echo "Nome: {$_GET['name']}, Cognome {$_GET['last_name']}.";
+
 // Nome: Matteo, Cognome Russo
 ?>
 <!-- <html lang="en">
@@ -25,7 +28,7 @@ function test() {
     <title>Array Superglobali</title>
 </head>
 <body>
-    <form action="superglobals-array.php" method="GET">
+    <form action="superglobals_array.php" method="GET">
         <label for="name">Nome: </label>
         <input type="text" id="name" name="name" placeholder="Inserire nome"> <br />
         <label for="last_name">Cognome: </label>
@@ -33,9 +36,10 @@ function test() {
         <button type="submit">Invia</button>
         <button type="reset">Reset</button>
     </form>
-    <?php
-    /* if (!empty($_GET)) {
+    <?php /*
+    if (!empty($_GET)) {
         extract($_GET);
+
         $response = <<<Text
         <h2>Dati utente</h2>
         <p>
@@ -44,7 +48,7 @@ function test() {
         </p>
         Text;
         echo $response;
-    } */
+    }*/
     ?>
 </body>
 </html> -->
@@ -60,20 +64,20 @@ function test() {
     <title>Array Superglobali</title>
 </head>
 <body>
-    <form action="superglobals-array.php" method="POST">
+    <form action="superglobals_array.php" method="POST">
         <label for="name">Nome: </label>
         <input type="text" id="name" name="name" placeholder="Inserire nome"> <br />
         <label for="last_name">Cognome: </label>
         <input type="text" id="last_name" name="last_name" placeholder="Inserire cognome">
         <button type="submit">Invia</button>
         <button type="reset">Reset</button>
-    </form>
+    </form> -->
     <?php /*
     if (!empty($_POST)) {
         $name_safe = htmlspecialchars($_POST['name']);
         echo $name_safe;
         exit();
-        //print_r($_POST);
+        print_r($_POST);
         extract($_POST);
         $response = <<<Text
         <h2>Dati utente</h2>
@@ -85,7 +89,8 @@ function test() {
         echo $response;
     }*/
     ?>
-</body>
+    <!--  &ltscript&gtalert(&#039Ciao&#039)&lt/script&gt -->
+<!-- </body>
 </html> -->
 
 <?php
@@ -99,15 +104,17 @@ echo '</pre>'; */
 //$ $_FILES
 /* echo '<pre>';
 print_r($_FILES);
-echo '</pre>'; */
-
-/* //* Info sul file caricato
-echo '<pre>';
+echo '</pre>';
+ */
+//* Info sul file caricato
+/* echo '<pre>';
 print_r($_FILES);
 echo '</pre>';
-echo "<h2>{$_POST['file-caricato']}</h2>";
 
 if(isset($_POST['file-caricato'])) {
+    print_r($_POST);
+    echo "<h2>{$_POST['file-caricato']}</h2>";
+
     //* Spostamento del file
     $uploadedPath = $_SERVER['DOCUMENT_ROOT'] . '/uploads';
 
@@ -137,7 +144,7 @@ if(isset($_POST['file-caricato'])) {
     <title>Document</title>
 </head>
 <body>
-    <form method="post" action="superglobals-array.php" enctype="multipart/form-data">
+    <form method="post" action="superglobals_array.php" enctype="multipart/form-data">
         <input type="file" name="file1">
         <button type="submit" name="file-caricato" value="File caricato">Carica</button>
     </form>
