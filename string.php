@@ -85,9 +85,9 @@ echo $nowdoc; */
 
 
 //% Costrutti delle stringhe
-?> <!-Occorre uscire da PHP -->
+?> <!--Occorre uscire da PHP -->
 <html>
-    <!-echo -->
+    <!--echo -->
     <?php /*
         $name = "Matteo";
         $age = 28;
@@ -100,7 +100,7 @@ echo $nowdoc; */
     <?= '<h2>Hello World</h2>'; ?>
  -->
 
-    <!-print -->
+    <!--print -->
     <?php //print $name; ?>
 </html>
 
@@ -122,6 +122,13 @@ printf("Ciao, mi chiamo %s e ho %d anni.", $nome, $età);
 $luogo = 'alberi';
 $frase = sprintf("Ci sono %d %s nel parco.", $numero, $luogo);
 echo $frase; // Ci sono 5 alberi nel parco. */
+
+//$ sscanf()
+/* $input = 'Febbraio 15 2023';
+sscanf($input, '%s %d %d', $mese, $giorno, $anno);
+echo "\$mese: $mese<br>";  // $mese: Febbraio
+echo "\$giorno: $giorno<br>"; // $mese: Febbraio
+echo "\$anno: $anno<br>";   // $anno: 2023 */
 
 
 //$ str_replace()
