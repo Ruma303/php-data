@@ -85,9 +85,9 @@ echo $nowdoc; */
 
 
 //% Costrutti delle stringhe
-?> <!-- Occorre uscire da PHP -->
+?> <!-Occorre uscire da PHP -->
 <html>
-    <!-- echo -->
+    <!-echo -->
     <?php /*
         $name = "Matteo";
         $age = 28;
@@ -100,7 +100,7 @@ echo $nowdoc; */
     <?= '<h2>Hello World</h2>'; ?>
  -->
 
-    <!-- print -->
+    <!-print -->
     <?php //print $name; ?>
 </html>
 
@@ -109,6 +109,22 @@ echo $nowdoc; */
 
 
 //% Metodi delle stringhe
+
+//$ printf()
+/* $nome = 'Mario';
+$età = 30;
+printf("Ciao, mi chiamo %s e ho %d anni.", $nome, $età);
+// Ciao, mi chiamo Mario e ho 30 anni. */
+
+
+//$ sprintf()
+/* $numero = 5;
+$luogo = 'alberi';
+$frase = sprintf("Ci sono %d %s nel parco.", $numero, $luogo);
+echo $frase; // Ci sono 5 alberi nel parco. */
+
+
+//$ str_replace()
 /* $originale = "Ciao, mondo!";
 $sostituita = str_replace("mondo", "PHP", $originale);
 echo $originale; // "Ciao, mondo!"
@@ -116,40 +132,54 @@ echo $sostituita; // "Ciao, PHP!" */
 
 $str = "Stringa di prova";
 
+//$ strlen()
 //echo strlen($str); // 16
 
+
+//$ substr()
 //echo substr($str, 5); // ga di prova
 //echo substr($str, 5, 4); // ga d
 
 
+//$ strpos()
 //echo strpos($str, "di"); // 8
 
+
+//$ strcmp()
 /* $str2 = "Ciao";
 echo strcmp($str, $str2); // 1 */
 
+//$ explode()
 /* $array = explode(" ", $str);
 var_dump($array); */
 
+
+//$ addslashes()
 /* $text = "L'apprendimento di 'PHP' è divertente!";
 echo addslashes($text); */
 // L\'apprendimento di \'PHP\' è divertente!
 
+
+//$ trim(), ltrim(), rtrim()
 /* echo trim("  Ciao, mondo!  ") . '<br>';   // "Ciao, mondo!"
 echo ltrim("  Ciao, mondo!  ") . '<br>';  // "Ciao, mondo!  "
 echo rtrim("  Ciao, mondo!  ") . '<br>';  // "  Ciao, mondo!" */
 
+
+//$ lcfirst(), ucfirst(), ucwords()
 /* echo lcfirst("Ciao, mondo!") . '<br>'; // "ciao, mondo!"
 echo ucfirst("ciao, mondo!") . '<br>'; // "Ciao, mondo!"
 echo ucwords("ciao, mondo!") . '<br>'; // "Ciao, Mondo!"
 echo ucwords("ciao mondo!", " ") . '<br>'; // "Ciao-Mondo!" */
 
+//$ strtolower(), strtoupper(), mb_strtolower(), mb_strtoupper()
 /* echo strtolower("Città") . '<br>';   // "città"
 echo strtoupper("città") . '<br>';   // "CITTà"
 echo mb_strtolower("CITTÀ") . '<br>'; // "città"
 echo mb_strtoupper("città") . '<br>'; // "CITTÀ" */
 
 
-//$ Metodi disponibili dopo PHP 8
+//% Metodi disponibili dopo PHP 8
 //echo str_contains("Ciao, mondo!", "mondo") . '<br>'; // true
 //echo str_starts_with("Ciao, mondo!", "Ciao") . '<br>'; // true
 //echo str_ends_with("Ciao, mondo!", "mondo!") . '<br>'; // true
