@@ -145,6 +145,13 @@ print_r($array); */
 // Array([0] => zero [1] => due [2] => tre)
 
 
+//% compact()
+/* $name = 'Michael';
+$email = 'micky@example.com';
+$user = compact('name', 'email',);
+echo '<pre>'; print_r($user); echo '</pre>'; */
+
+
 
 //% Operatori negli array
 //$ Operatore di unione +
