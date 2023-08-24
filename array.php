@@ -88,16 +88,50 @@ echo $firstName, $lastName, $age, 0, 10, 11; */
 
 
 
-
 //% Array unpacking
 //$array1 = [1, 2, 3];
 //$array2 = [$array1, 4, 5, 6];
 //print_r($array2);
 
-/* $array2 = [...$array1, 4, 5, 6];
+/* $array1 = [1, 2, 3];
+$array2 = [...$array1, 4, 5, 6];
 var_dump($array2); */
 // [1, 2, 3, 4, 5, 6]
 
+/* $array1 = [1, 2, 3];
+$array2 = [4, 5, 6];
+$array3 = [0, ...$array1, ...$array1, 7, 8, 9]; */
+// [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+
+
+//% Destrutturazione array
+/* $array = ['Alice', 'Bob', 'Charlie'];
+[$first, $second, $third] = $array;
+echo $first; // Alice
+echo $second; // Bob
+echo $third; // Charlie */
+
+//$ Destrutturare solo alcuni valori
+/* $array = [1, 2, 3, 4, 5];
+[$first, , $third, , $fifth] = $array;
+echo $first; // 1
+echo $third; // 3
+echo $fifth; // 5 */
+
+//$ Destrutturare utilizzando array associativi
+/* $array = ['name' => 'Alice', 'age' => 25];
+['name' => $name, 'age' => $age] = $array;
+echo $name; // Alice
+echo $age; // 25
+ */
+
+//$ Destrutturare assegnando valori dell'array direttamente alle variabili
+/* [$a, $b, $c] = [1, 2, 3];
+echo $a . '<br>'; // 1
+echo $b . '<br>'; // 2
+echo $c . '<br>'; // 3
+ */
 
 
 //% Rimappare l'array
@@ -111,8 +145,8 @@ print_r($array); */
 // Array([0] => zero [1] => due [2] => tre)
 
 
-//% Operatori degli array
 
+//% Operatori negli array
 //$ Operatore di unione +
 /* $array1 = array("a" => "apple", "b" => "banana");
 $array2 = array("a" => "pear", "c" => "cherry");
