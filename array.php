@@ -55,7 +55,7 @@ var_dump($cities); */
 ); */
 
 //* Accedere agli array associativi
-//echo $array["age"].' '.$array[10]; // 54 10
+//echo $array["age"].' '.$array[10]; // 54 20
 
 //* Parsing delle variabili
 //echo "$array['age'] $array[10]"; // Parse error
@@ -69,22 +69,21 @@ echo $firstName, $lastName, $age, 0, 10, 11; */
 
 
 //$ Array multidimensionali
-/* $people = [
+$people = [
     "persone" => 3,
-    true,
     ['name' => "Paolo", 2, "interests" => ["Calcio", "Economia"]],
     "Utente 1" => ['name' => "Giovanna", 5, "interests" => ["Aerei", "Viaggi"]],
     "Utente 2" =>['name' => "Michele", 8, "interests" => ["Cavalli", "sport" => "Ping Pong"]],
-]; */
+];
 //print_r($people);
 
 
 //* Accedere agli elementi
-//echo $people["persone"]; // 3
-//var_dump($people[1]); // Primo array
-//var_dump($people["Utente 1"]); // Secondo array
-//var_dump($people["Utente 1"]["name"]); // "Giovanna"
-//var_dump($people["Utente 2"]["interests"]["sport"]); // "Cavalli"
+    echo $people["persone"]; // 3
+    var_dump($people[0]); // Primo array
+    var_dump($people["Utente 1"]); // Secondo array
+    var_dump($people["Utente 1"]["name"]); // "Giovanna"
+    var_dump($people["Utente 2"]["interests"]["sport"]); // "Ping Pong"
 
 
 

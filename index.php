@@ -1,43 +1,32 @@
 <?php
 //% Tipizzazione dinamica
-/* $num= 20;
-echo gettype($num); // number
+/* $num = 20;
+echo gettype($num), '<br>'; // integer
 $word = 'Ciao';
-echo gettype($word); // string
+echo gettype($word), '<br>'; // string
 $bool = TRUE;
-echo gettype($bool); // boolean */
+echo gettype($bool), '<br>'; // boolean
+$array = [];
+echo gettype($array), '<br>'; // array */
 
 
 //% Controlli sui valori (Debugging)
 
-//$ is_numeric & var_dump()
+//, is_numeric & var_dump()
 /* $a = 10;
 $var = is_numeric($a);
-var_dump($var); */
+var_dump($var); // true */
 
 /* $b = 1.4;
 var_dump($b); */
 
-//$ isset()
+//, isset()
 /* $c;
 $response = isset($c);
-var_dump($response); */
+var_dump($c); */
+
 // Assegnazione valori
+
 /* $c = 'Ciao';
 $response = isset($c);
 var_dump($response); */
-
-//$ gettype()
-/* $var = 'Ciao'; // string
-var_dump(gettype($var)); */
-
-/* $var = []; // array
-var_dump(gettype($var)); */
-
-/* $float = 2.1;
-var_dump($float); // float
-
-$double = gettype($float);
-echo $double; // double */
-
-

@@ -73,7 +73,6 @@ Text;
 echo $heredoc; */
 // Ciao, il mio nome è Matteo " Piacere di conoscerti! '
 
-
 //$ Nowdoc
 /* $nome = "Matteo";
 $nowdoc = <<<'Text'
