@@ -4,10 +4,13 @@
 $isBoolean = True;
 $isBoolean = TRUE;
 echo $isBoolean; */
+
 /* $isBoolean = 0;
+$isBoolean = false;
 echo $isBoolean;
 $isBoolean = "";
 echo $isBoolean; */
+
 /* $isBoolean = "0.0";
 echo $isBoolean; */
 
